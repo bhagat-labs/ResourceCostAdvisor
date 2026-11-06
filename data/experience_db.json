@@ -1,0 +1,8 @@
+{
+  "downsize_successes": 5,
+  "downsize_failures": 1,
+  "scale_out_successes": 10,
+  "scale_out_failures": 0,
+  "maintain_successes": 25,
+  "maintain_failures": 2
+}
