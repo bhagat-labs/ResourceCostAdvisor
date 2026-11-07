@@ -46,7 +46,12 @@ llm_agent = LLMToolAgent(model_name="qwen2.5")
 sr_res = sr_agent.evaluate(current_scenario["metrics"], current_scenario["slos"])
 mb_res = mb_agent.evaluate(current_scenario["metrics"], current_scenario["slos"])
 gb_res = gb_agent.evaluate(current_scenario["metrics"], current_scenario["slos"])
-ub_res = ub_agent.evaluate(current_scenario["metrics"], current_scenario["cost"], current_scenario["slos"])
+cost_payload = {
+    "hourly": current_scenario["cost"]["current_hourly_cost"],
+    "instance_type": current_scenario["cost"]["instance_type"]
+}
+ub_res = ub_agent.evaluate(current_scenario["metrics"], cost_payload, current_scenario["slos"])
+# ub_res = ub_agent.evaluate(current_scenario["metrics"], current_scenario["cost"], current_scenario["slos"])
 la_res = la_agent.evaluate(current_scenario["metrics"], current_scenario["cost"])
 
 # Display comparison table / cards
