@@ -40,7 +40,7 @@ mb_agent = ModelBasedReflexAgent()
 gb_agent = GoalBasedAgent()
 ub_agent = UtilityBasedAgent()
 la_agent = LearningAgent()
-llm_agent = LLMToolAgent(model_name="qwen2.5")
+llm_agent = LLMToolAgent(model_name="qwen2.5:latest")
 
 # Run Evaluations
 sr_res = sr_agent.evaluate(current_scenario["metrics"], current_scenario["slos"])

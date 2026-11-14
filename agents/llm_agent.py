@@ -3,7 +3,7 @@ import json
 from tools.cloud_tools import get_resource_metrics, get_cost_estimate, get_service_level_targets, get_scaling_policy
 
 class LLMToolAgent:
-    def __init__(self, model_name="qwen2.5"):
+    def __init__(self, model_name="qwen2.5:latest"):
         self.model_name = model_name
 
     def run_analysis(self, scenario_id: str):
